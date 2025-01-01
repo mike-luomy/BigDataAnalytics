@@ -32,7 +32,10 @@ services:
   monitortool:
     image: monitortool
     depends_on:
-      - mongodb
+      - dbstorage
+    environment:
+      DBHOST: dbstorage
+
     
 volumes:
   dbstorage:
