@@ -28,6 +28,11 @@ services:
     volumes:
       - dbstorage:/data/db
       - dbconfig:/data/configdb
+
+  monitortool:
+    image: monitortool
+    depends_on:
+      - mongodb
     
 volumes:
   dbstorage:
